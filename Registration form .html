@@ -1,40 +1,106 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> html form</title>
+  <meta charset="UTF-8" />
+  <title>Students Registration Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      padding: 20px;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .form-container {
+      width: 500px;
+      background-color: #ffeb3b; /* bright yellow */
+      padding: 20px;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    .gender, .courses {
+      margin-top: 15px;
+    }
+    .gender label, .courses label {
+      font-weight: normal;
+      margin-right: 15px;
+    }
+    .courses label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+    input[type="submit"], input[type="reset"] {
+      margin-top: 20px;
+      padding: 8px 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-<h1>Students Registration Form</h1><hr><hr>
-<div style="width:500px;height:500px;background-color:yellow;padding:10px;">
-<form name="formEntry" id="formEntry" action="processor.html" method="post">
-First Name:
-<input type ="text" value = "First Name">
-<br><br>
-Middle Name:
-<input type ="text" value = "Middle Name"><br><br>
-Last Name:
-<input type ="text" value = "Last name"><br><br>
-Gender:
-<input type ="radio" name = "gender"id="male">
-<label for ="male">Male</label>
-<input type ="radio" name = "gender"id="female">
-<label for ="female">Female</label><br>
-<h2>In Which Course Do You Want To Join?</h2>
-<input type ="checkbox" name ="course" id ="Hardware">
-<label for ="hardware"> Hardware</label>
-<input type ="checkbox" name ="course" id ="webpage">
-<label for ="webpage"> Webpage</label>
-<input type ="checkbox" name ="course" id ="network">
-<label for ="network"> Network</label><br>
-<input type ="checkbox" name ="course" id ="c_language">
-<label for ="c language"> C-Language</label>
-<input type ="checkbox" name ="course" id ="java">
-<label for ="java"> Java</label>
-<input type ="checkbox" name ="course" id ="css">
-<label for ="css"> CSS</label><br><br>
-<input type ="submit" value = "submit">
-<input type ="reset" value ="reset">
-</form>
-</head>
+
+  <h1>Students Registration Form</h1>
+  <hr>
+
+  <div class="form-container">
+    <form name="formEntry" id="formEntry" action="processor.html" method="post">
+
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required>
+
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" name="middleName" placeholder="Enter Middle Name">
+
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required>
+
+      <div class="gender">
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="male" value="Male" required>
+        <label for="male">Male</label>
+
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label>
+      </div>
+
+      <h2>In Which Course Do You Want To Join?</h2>
+      <div class="courses">
+        <input type="checkbox" name="course" id="hardware" value="Hardware">
+        <label for="hardware">Hardware</label>
+
+        <input type="checkbox" name="course" id="webpage" value="Webpage">
+        <label for="webpage">Webpage</label>
+
+        <input type="checkbox" name="course" id="network" value="Network">
+        <label for="network">Network</label>
+
+        <input type="checkbox" name="course" id="c_language" value="C-Language">
+        <label for="c_language">C-Language</label>
+
+        <input type="checkbox" name="course" id="java" value="Java">
+        <label for="java">Java</label>
+
+        <input type="checkbox" name="course" id="css" value="CSS">
+        <label for="css">CSS</label>
+      </div>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+
+    </form>
+  </div>
+
+</body>
 </html>
-
-
